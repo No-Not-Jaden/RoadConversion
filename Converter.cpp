@@ -71,7 +71,9 @@ int main(int argc, char* argv[]) {
         bool fullySorted = true;
         for (int i = 0; i < keySize-1; i++)
         {
-            if (roadKeys[i].compare(roadKeys[i+1]) > 0 || (roadKeys[i].compare(roadKeys[i+1]) == 0 && roadMap[i].length < roadMap[i+1].length)) {
+            // Sorts by alphabetical / Numerical order for the road
+            // then bore along, bore across, plow
+            if (roadKeys[i].compare(roadKeys[i+1]) > 0 || (roadKeys[i].compare(roadKeys[i+1]) == 0 && roadMap[i].plow && !roadMap[i+1].plow) || (roadKeys[i].compare(roadKeys[i+1]) == 0 && !roadMap[i].plow && !roadMap[i+1].plow && !roadMap[i].along && roadMap[i+1].along)) {
                 // switch values
                 string oldValue = roadKeys[i];
                 Road oldRoad = roadMap[i];
@@ -91,8 +93,14 @@ int main(int argc, char* argv[]) {
     int plowTotal = 0;
     int boreTotal = 0;
     int boreAcrossTotal = 0;
+    string lastRoadName = roadKeys[0];
     for (int i = 0; i < keySize; i++)
     {
+        if (lastRoadName.compare(roadKeys[i]) != 0) {
+            // add space between different roads
+            cout << endl;
+            lastRoadName = roadKeys[i];
+        }
         if (roadMap[i].plow) {
             cout << "Plow ";
             plowTotal+= roadMap[i].length;
@@ -112,6 +120,7 @@ int main(int argc, char* argv[]) {
         cout << roadKeys[i] << " a total of " << roadMap[i].length << " feet of fiber cable in 1-2\" SDR 13.5 HDPE Type 3 conduit" << endl;
     }
 
+    cout << endl;
     cout << "Plow total: " << plowTotal << " feet." << endl;
     cout << "Directional Bore Along Total: " << boreTotal << " feet." << endl;
     cout << "Directional Bore Across Total: " << boreAcrossTotal << " feet." << endl;

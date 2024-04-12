@@ -1,0 +1,18 @@
+Directional bore along NC-33 a total of 14435 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+Directional bore across NC-33 a total of 420 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+Plow along NC-33 a total of 18295 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+
+Directional bore along SR-1106 a total of 255 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+
+Directional bore along SR-1114 a total of 4010 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+Directional bore across SR-1114 a total of 60 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+
+Directional bore along SR-1117 a total of 3130 feet of fiber cable in 1-2" SDR 13.5 HDPE Type 3 conduit
+
+Plow total: 18295 feet.
+Directional Bore Along Total: 21830 feet.
+Directional Bore Across Total: 480 feet.
+Total Plow + Bore: 40605 feet.
+
+4 different roads in this segment.
+NC-33, SR-1106, SR-1114, and SR-1117

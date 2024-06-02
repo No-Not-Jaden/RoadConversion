@@ -67,6 +67,7 @@ int main(int argc, char *argv[])
 
 void countStage3(string fileName)
 {
+    keySize = 0;
     ifstream file;
     string relativeName = inputFiles;
     relativeName.append("/").append(fileName);
@@ -203,12 +204,14 @@ void countStage3(string fileName)
     output << "Plow total: " << plowTotal << " feet." << endl;
     output << "Directional Bore Along Total: " << boreTotal << " feet." << endl;
     output << "Directional Bore Across Total: " << boreAcrossTotal << " feet." << endl;
+    output << "Bore Total: " << boreTotal + boreAcrossTotal << " feet." << endl;
     output << "Total Plow + Bore: " << boreTotal + boreAcrossTotal + plowTotal << " feet." << endl;
 
     cout << endl;
     cout << "Plow total: " << plowTotal << " feet." << endl;
     cout << "Directional Bore Along Total: " << boreTotal << " feet." << endl;
     cout << "Directional Bore Across Total: " << boreAcrossTotal << " feet." << endl;
+    cout << "Bore Total: " << boreTotal + boreAcrossTotal << " feet." << endl;
     cout << "Total Plow + Bore: " << boreTotal + boreAcrossTotal + plowTotal << " feet." << endl;
 
     if (keySize < 1)
